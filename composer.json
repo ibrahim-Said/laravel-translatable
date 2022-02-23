@@ -1,0 +1,30 @@
+{
+    "name": "said/laravel-translatable",
+    "description": "This is a Laravel package containing a trait for translatable Eloquent models. This package follows the approach to have only a single table to maintain all the translations.",
+    "type": "library",
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "^5.7",
+        "illuminate/database": "^5.7"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Said Ibrahim",
+            "email": "saidibrahim73@hotmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+          "Said\\Translatable\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+          "providers": [
+            "Said\\Translatable\\TranslatableServiceProvider"
+          ]
+        }
+      }
+}
