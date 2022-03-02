@@ -19,6 +19,13 @@ class TranslatableServiceProvider extends ServiceProvider
     public function boot(): void
     {
         $this->loadMigrationsFrom(__DIR__.'/../database/migrations/');
+        $this->publishes([
+            __DIR__.'/../config/translatable.php' => config_path('translatable.php')
+        ], 'translatable-config');
+     
+        // $this->publishes([
+        //     __DIR__.'/../database/migrations/' => database_path('migrations')
+        // ], 'translatable-migrations');
     }
 
     /**

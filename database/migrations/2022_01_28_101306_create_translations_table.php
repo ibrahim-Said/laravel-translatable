@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTranslatesTable extends Migration
+class CreateTranslationsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class CreateTranslatesTable extends Migration
      */
     public function up()
     {
-        if(Schema::hasTable('translates')) return;
-        Schema::create('translates', function (Blueprint $table) {
+        if(Schema::hasTable('translations')) return;
+        Schema::create('translations', function (Blueprint $table) {
             $table->increments('id');
             $table->string('translatable_type');
             $table->integer('translatable_id');
