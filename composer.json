@@ -14,7 +14,6 @@
             "email": "saidibrahim73@hotmail.com"
         }
     ],
-    "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
           "Said\\Translatable\\": "src"
