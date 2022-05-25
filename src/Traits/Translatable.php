@@ -2,8 +2,9 @@
 
 namespace Said\Translatable\Traits;
 
-use Said\Translatable\Translation;
 use Illuminate\Database\Eloquent\Model;
+use Said\Translatable\Models\Translation;
+
 /**
  * Description of Translatable
  * 

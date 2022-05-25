@@ -1,8 +1,8 @@
 <?php
 
-namespace Said\Translatable;
+namespace Said\Translatable\Models;
+
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\MorphTo;
 
 class Translation extends Model
 {
