@@ -54,6 +54,27 @@ class MyModel extends Model
 }
 ```
 
+Saving the translations in Controller
+---
+
+```php
+<?php
+
+public function store(Request $request) {
+    $data = [
+       'en' => [
+           'name'       => en-name
+       ],
+       'fr' => [
+           'name'       => fr-name
+       ],
+    ];
+
+    // Now just pass this array to regular Eloquent function    
+    MyModel::create($data);
+}
+```
+
 Methods
 ---
 
