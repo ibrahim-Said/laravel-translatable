@@ -16,8 +16,7 @@ trait Translatable
     protected $defaultLocale;
     protected $selectedLocale;
 
-    protected static function boot() {
-        parent::boot();
+    protected static function bootTranslatable() {
         static::deleting(function($model) {
             $model->translations()->delete();
         });
