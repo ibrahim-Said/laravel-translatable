@@ -338,7 +338,7 @@ trait Translatable
                 unset($attributes[$key]);
             }
         }
-        if($attributes[$this->getKeyName()]==0 || $attributes[$this->getKeyName()]==null){
+        if(@$attributes[$this->getKeyName()]==0 || @$attributes[$this->getKeyName()]==null){
             unset($attributes[$this->getKeyName()]);
         }
         return parent::fill($attributes);
