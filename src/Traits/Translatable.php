@@ -47,13 +47,13 @@ trait Translatable
         if ($this->selectedLocale != $this->defaultLocale) {
             self::$trans = [];
         }
-        if (!isset(self::$trans[$this->id])) {
+        if (!isset(self::$trans[$this->getKey()])) {
             $this->selectedLocale = $this->locale();
             $fallBackLocale = config('translatable.fallback_locale');
             if(!$with_fall_back){
-                self::$trans[$this->id] = $this->getTranslationCollection($this->selectedLocale);
+                self::$trans[$this->getKey()] = $this->getTranslationCollection($this->selectedLocale);
             }else{
-                self::$trans[$this->id] = (count($this->getTranslationCollection($this->selectedLocale))>0) ? $this->getTranslationCollection($this->selectedLocale) : $this->getTranslationCollection($fallBackLocale);
+                self::$trans[$this->getKey()] = (count($this->getTranslationCollection($this->selectedLocale))>0) ? $this->getTranslationCollection($this->selectedLocale) : $this->getTranslationCollection($fallBackLocale);
             }
         }
     }
@@ -70,7 +70,7 @@ trait Translatable
 
         $this->init($fallBack);
         $default=($default) ? $default : @$this->attributes[$column];
-        return self::$trans[$this->id][$column] ?? $default;
+        return self::$trans[$this->getKey()][$column] ?? $default;
     }
     /**
      * @param mixed $locale
