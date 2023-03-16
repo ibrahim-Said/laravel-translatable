@@ -23,7 +23,7 @@ Installation
 You can install the package via composer:
 
 ```bash
-composer require said/laravel-translatable
+composer require said/laravel-translatable:0.0.7
 ```
 
 Now you can use this Trait on any Eloquent Model of your project.
